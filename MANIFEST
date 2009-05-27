@@ -23,3 +23,6 @@ t/00-load.t
 t/author/pod-coverage.t
 t/author/pod.t
 t/emacs-live.t
+t/no-dependencies.t
+t/result-css.t
+t/result-parser.t
