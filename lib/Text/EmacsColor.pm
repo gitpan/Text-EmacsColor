@@ -11,7 +11,7 @@ sub dist_file(@) {
 
 use namespace::clean -except => 'meta';
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 has 'emacs_command' => (
     is         => 'ro',
@@ -47,6 +47,7 @@ sub format {
     my %fixes = (
         n   => "\n",
         '"' => '"',
+        "\\" => "\\",
     );
     $html =~ s/\\(.)/$fixes{$1}/g;
     return Text::EmacsColor::Result->new( full_html => $html );
